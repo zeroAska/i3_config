@@ -1,0 +1,64 @@
+theme = "gruvbox-dark"
+icons = "awesome"
+
+
+[[block]]
+block = "net"
+device = "wlp4s0"
+signal_strength = false
+ip = true
+speed_up=false
+speed_down = false
+interval = 20
+
+
+[[block]]
+block = "cpu"
+format = "CPU: {barchart} {utilization}%"
+interval = 1
+
+
+[[block]]
+block = "memory"
+display_type = "memory"
+icons = false
+format_mem = "Mem: {Mug}GB/{MTg}GB({Mup}%)"
+interval = 5
+warning_mem = 80
+critical_mem = 95
+
+
+[[block]]
+block = "memory"
+display_type = "swap"
+icons = false
+format_swap = "Swap: {SUg}GB/{STg}GB({SUp}%)"
+interval = 5
+warning_swap = 80
+critical_swap = 95
+
+
+
+[[block]]
+block = "disk_space"
+path = "/"
+alias = "Disk Path:/"
+info_type = "available"
+unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "time"
+interval = 60
+format = "%a %m/%d/%y %R"
+
+[[block]]
+block = "battery"
+interval = 30
+format = "Battery: {percentage}% {time}h"
